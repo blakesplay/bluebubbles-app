@@ -100,10 +100,7 @@ class _TextFieldSuffixState extends OptimizedState<TextFieldSuffix> {
                       await RecordPlatform.instance.start(widget.controller!.chat.guid, const RecordConfig(bitRate: 320000), path: temp.path);
                       return;
                     }
-                    await widget.recorderController!.record(
-                      sampleRate: 44100,
-                      bitRate: 320000,
-                    );
+                    await widget.recorderController!.record();
                   } else {
                     late final String? path;
                     late final PlatformFile file;
